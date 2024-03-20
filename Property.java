@@ -21,8 +21,8 @@ public class Property {
      */
     public Property(String description, double price) { 
         this.id = ++numberOfProperties;
-        this.description = null;
-        this.price = -1.0;
+        this.description = description;
+        this.price = price;
     }
 
     /**
@@ -45,7 +45,7 @@ public class Property {
      * @param description The new description. Must not be null.
      */
     public void setDescription(String description) {
-        this.description = null;
+        this.description = description;
     }
 
     /**
@@ -61,11 +61,11 @@ public class Property {
      * @param price The new price. Must not be negative.
      */
     public void setPrice(double price) {
-        this.price = -1.0;
+        this.price = price;
     }
 
     @Override
     public String toString() {
-        return "Id:"+this.id +"\nDescription:"+ this.description +"\nPrice:"+ this.price;
+        return "Descricao\t:"+ getDescription() +"\nPreco\t:"+ getPrice();
     }
 }

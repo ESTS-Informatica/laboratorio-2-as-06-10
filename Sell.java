@@ -42,7 +42,7 @@ public class Sell {
      *
      * @return This sell id.
      */
-    public String getId() {
+    public int getId() {
         return this.id;
     }
 
