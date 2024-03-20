@@ -74,6 +74,7 @@ public class Company {
      */
     public boolean registerClient(User client) {
         if(client != null){
+            
             clients.add(client);
             return true;  
         }else{

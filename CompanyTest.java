@@ -65,4 +65,33 @@ public class CompanyTest
         this.company1.registerSeller(this.seller2);
         assertEquals(true, this.company1.registerSeller(this.seller2));
     }
+    
+    @Test
+    public void testRegisterClient(){
+        User client3 = new User("Albino", "911111115", "ab@gmail.pt");
+        this.company1.registerClient(client3);
+        assertTrue(this.company1.registerClient(client3));
+    }
+    
+    @Test
+    public void testRegisterClients(){
+        User client4 = new User("Albino3", "911111415", "abd@gmail.pt");
+        User client5 = new User("Albino4", "911151115", "abe@gmail.pt");
+        this.company1.registerClient(client4);
+        this.company1.registerClient(client4);
+        assertTrue(this.company1.registerClient(client4));
+        assertTrue(this.company1.registerClient(client5));
+    }
+    
+    @Test
+    public void testRegisterClientDuplicate(){
+        
+    }
+    
+    @Test
+    public void testRegisterClientNull(){
+        User client6 = null;
+        this.company1.registerClient(client6);
+        assertFalse(this.company1.registerClient(client6));
+    }
 }
