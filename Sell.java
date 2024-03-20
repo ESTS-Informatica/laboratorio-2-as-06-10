@@ -12,7 +12,7 @@ public class Sell {
 
     private static int NUMBER_OF_SELLS = 0;
     // Id of the sell.
-    private final String id;
+    private final int id;
     // Client to whom the sell is done.
     private User client;
     // Seller who performed the sell.
@@ -30,10 +30,10 @@ public class Sell {
      * @param property The sold property.
      */
     public Sell(User client, User seller, Property property) {
-        this.id = Integer.toString(++NUMBER_OF_SELLS);
-        this.client = client;
-        this.seller = seller;
-        this.property = property;
+        this.id = ++NUMBER_OF_SELLS;
+        this.client = null;
+        this.seller = null;
+        this.property = null;
         this.date = LocalDate.now();
     }
 
